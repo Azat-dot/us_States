@@ -3,25 +3,25 @@ import "leaflet-search";
 import "leaflet-search/dist/leaflet-search.min.css";
 import states from "./states";
 
-var mapOptions = {
-  center: [37.975000009, -96.271],
+let mapOptions = {
+  center: [40, -95],
   zoom: 4
 };
 
-var map = L.map("leafletMapid", mapOptions);
+let map = L.map("leafletMapid", mapOptions);
 
-var baselayer = L.tileLayer(
-  "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}",
+let baselayer = L.tileLayer(
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
   {
     attribution:
-      "Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri",
-    maxZoom: 9
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
   }
 );
 
 baselayer.addTo(map);
 
-var featuresLayer = new L.GeoJSON(states, {
+let featuresLayer = new L.GeoJSON(states, {
   style: function (feature) {
     return { geometry: feature.properties.name };
   },
@@ -46,13 +46,13 @@ var featuresLayer = new L.GeoJSON(states, {
 
 map.addLayer(featuresLayer);
 
-var searchControl = new L.Control.Search({
+let searchControl = new L.Control.Search({
   layer: featuresLayer,
   propertyName: "name",
   marker: false,
   position: "topright",
   moveToLocation: function (latlng, title, map) {
-    var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+    let zoom = map.getBoundsZoom(latlng.layer.getBounds());
     map.setView(latlng, zoom);
   }
 });
