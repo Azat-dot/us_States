@@ -12,9 +12,14 @@ In top-right there is a search, where by typing(in russion) even first letters o
 By choosing one of them, it will zoom in to State and basic information will also pop-up .
 
 used technologies:
-v - JS
-v - css
-v - git
-v - json
-v - leaflet
-v - react
+v - JS,
+
+v - css,
+
+v - git,
+
+v - json,
+
+v - leaflet,
+
+v - react,
