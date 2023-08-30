@@ -1,26 +1,23 @@
-# us_States
-USA states are presented from geojson data with help of leaflet
+# Information of US States
 
-Below link is for code sandbox
-https://94cpvy.csb.app/
+## USA states are presented from geojson data with help of leaflet
 
+## Below link is for code sandbox
+ [https://94cpvy.csb.app/](https://94cpvy.csb.app/)
 
-By pushing to any of states, basic inforamtion will pop-up. 
+## Logic
 
-In top-right there is a search, where by typing(in russion) even first letters of states name, they will appear. 
+- By pushing to any of states, basic inforamtion will pop-up. 
 
-By choosing one of them, it will zoom in to State and basic information will also pop-up .
+- In top-right there is a search, where by typing(in russion) even first letters of states name, they will appear. 
 
-used technologies:
+- By choosing one of them, it will zoom in to State and basic information will also pop-up .
 
-v - JS,
+## used technologies:
 
-v - css,
-
-v - git,
-
-v - json,
-
-v - leaflet,
-
-v - react,
+- JS,
+- css,
+- git,
+- json,
+- leaflet,
+- react,
